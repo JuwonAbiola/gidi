@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>card</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="title">
+    Card Details
+  </div>
+  <div style="border: 0.5px solid #F3F3F3;margin: 9px 10px; "></div>
+  <div class="text">
+    Cardholder Name
+  </div>
+  <ion-item>
+    <ion-textarea
+      rows="1"
+      cols="20"
+      type="text"
+      [(ngModel)]="cardName"
+    ></ion-textarea>
+  </ion-item>
+  <br />
+  <div class="text">
+    Card Number
+  </div>
+  <ion-item>
+    <ion-textarea
+      rows="1"
+      cols="20"
+      type="text"
+      [(ngModel)]="cardNum"
+    ></ion-textarea>
+  </ion-item>
+  <br />
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-item>
+          <ion-textarea
+            rows="1"
+            cols="3"
+            type="Number"
+            maxlength="2"
+            placeholder="mnth"
+            [(ngModel)]="expM"
+          ></ion-textarea>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-textarea
+            rows="1"
+            cols="3"
+            type="Number"
+            maxlength="2"
+            placeholder="year"
+            [(ngModel)]="expY"
+          ></ion-textarea>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-textarea
+            rows="1"
+            cols="3"
+            type="Number"
+            maxlength="3"
+            placeholder="cvv"
+            [(ngModel)]="cvc"
+          ></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br />
+  <br />
+  <br />
+  <div class="centre">
+    <div class="save" (click)="onDeviceReady()">
+      Pay
+    </div>
+    <br />
+  </div>
+</ion-content>

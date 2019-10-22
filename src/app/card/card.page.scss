@@ -1,0 +1,63 @@
+.title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #298dcc;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #298dcc;
+}
+
+.item.item-select {
+  background-color: transparent;
+  border-radius: 3px !important;
+  border: 1px solid #298dcc;
+  margin-top: 5px;
+  padding: 2px !important;
+  max-width: 50% !important;
+}
+
+ion-select {
+  max-width: 100% !important;
+}
+
+.item.item-input {
+  background-color: transparent;
+  border-radius: 3px !important;
+  border: 1px solid #298dcc;
+  margin-top: 5px;
+  padding: 2px !important;
+  max-width: 70% !important;
+}
+
+.save {
+  background: #27ae60;
+  box-shadow: 0px 9px 11px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 13px 5px;
+  width: 178px;
+  margin: 0 auto !important;
+}
+
+.delete {
+  border: 1px solid #ea4335;
+  box-sizing: border-box;
+  box-shadow: 0px 9px 11px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 13px 5px;
+  width: 178px;
+  color: #ea4335;
+  text-align: center;
+  margin: 0 auto !important;
+}

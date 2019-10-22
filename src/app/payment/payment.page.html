@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="card-m" (click)="pay()">
+    <ion-row>
+      <ion-col col-2 style="text-align: center">
+        <img class="img-pad" src="assets/imgs/p-online.svg" />
+      </ion-col>
+      <ion-col class="tpad">
+        <b class="card-h">
+          Pay online
+        </b>
+        <p class="card-p">
+          Pay for your gas delivery via internet banking. Visa and Master Card
+          accepted
+        </p>
+      </ion-col>
+      <ion-col col-2>
+        <img class="img-pad" src="assets/imgs/w-arrow.svg" />
+      </ion-col>
+    </ion-row>
+  </div>
+  <br />
+  <br />
+  <div class="card-m">
+    <ion-row>
+      <ion-col col-2 style="text-align: center">
+        <img class="img-pad" src="assets/imgs/p-delivery.svg" />
+      </ion-col>
+      <ion-col class="tpad">
+        <b class="card-h">
+          Pay on delivery
+        </b>
+        <p class="card-p">
+          Pay for your gas delivery with cash when our dispatcher arrives
+        </p>
+      </ion-col>
+
+      <ion-col col-2>
+        <img class="img-pad" src="assets/imgs/w-arrow.svg" />
+      </ion-col>
+    </ion-row>
+  </div>
+  <br />
+  <br />
+</ion-content>

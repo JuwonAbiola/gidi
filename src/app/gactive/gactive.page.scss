@@ -1,0 +1,54 @@
+.cen {
+  margin: 0 auto;
+  text-align: center;
+}
+.car {
+  background: #f9f9f9;
+  border-radius: 5px;
+  height: 80%;
+}
+.card_head {
+  font-style: normal;
+  font-weight: 600;
+  // font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #3795eb;
+}
+
+hr {
+  display: block;
+  margin: 0;
+  border-style: inset;
+}
+
+.card-md {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+ion-card {
+  margin-bottom: 20px;
+}
+
+.order_status {
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.order_s {
+  background: #f9f9f9;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+  line-height: 13px;
+}
+
+.custom-skeleton ion-skeleton-text:last-child {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,168 @@
+<!--
+  Generated template for the GactivePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="cen" col-6>
+      <img src="assets/imgs/os-active.svg" />
+    </ion-col>
+    <ion-col class="cen" col-6>
+      <img src="assets/imgs/os-history.svg" (click)="ohistory()" />
+    </ion-col>
+  </ion-row>
+  <div *ngIf="!loader">
+    <ion-card
+      class="order_s"
+      ion-item
+      *ngFor="let film of (films | async)?.data"
+      (click)="openDetails(film)"
+    >
+      <ion-card-content>
+        <ion-row>
+          <ion-col col-2>
+            <img
+              height="100%"
+              style="text-align: right"
+              src="assets/imgs/cyl.svg"
+            />
+          </ion-col>
+          <ion-col col-5>
+            <ion-row>Uche & Sons LTD</ion-row>
+            <ion-row>N3,500</ion-row>
+            <ion-row>{{ film.tid }}</ion-row>
+          </ion-col>
+          <ion-col col-2></ion-col>
+          <ion-col col-3>
+            <ion-row>Successful</ion-row>
+            <ion-row>{{ film.cylinder_size }}kg</ion-row>
+            <ion-row>12/12/2019</ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Skeleton screen -->
+  <div *ngIf="loader">
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="empty">
+    <div class="cen">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <img class="cen" src="../../assets/imgs/empty.svg" />
+      <br />
+      <br />
+      <b class="cen">
+        Your currently have no active orders.
+      </b>
+      <br />
+      <br />
+      <b class="cen">
+        Create one?
+      </b>
+      <br />
+      <br />
+      <br />
+      <img class="cen" src="../../assets/imgs/plus.svg" (click)="order()" />
+    </div>
+  </div>
+</ion-content>

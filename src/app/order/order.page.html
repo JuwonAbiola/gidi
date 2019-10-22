@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <img src="assets/imgs/icon.svg" />
+    </ion-buttons>
+
+    <ion-title>Create Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <br />
+  <div class="card-m">
+    <ion-row>
+      <ion-col>
+        <b class="card-p">
+          Location
+        </b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div style="color: #298DCC;">
+    <ion-input [(ngModel)]="location"></ion-input>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="card-m1" stacked>
+        <b style="color: #fff">
+          Vendor
+        </b>
+      </ion-label>
+
+      <ion-select [(ngModel)]="ven" interface="action-sheet">
+        <ion-select-option
+          *ngFor="let film of (films | async)?.rows"
+          [value]="film.name"
+          >{{ film.name }}</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br />
+  <br />
+  <div class="card-m">
+    <ion-row>
+      <ion-col>
+        <b class="card-p">
+          Cylinder size
+        </b>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div style="border: #298DCC 1px solid; border-radius: 10px;margin:12px">
+    <div style="color: #298DCC;margin:5px">
+      <ion-row>
+        <ion-col> </ion-col>
+        <ion-col>
+          <ion-icon name="arrow-dropleft" (click)="decrement()"></ion-icon>
+          {{ currentNumber }}kg
+          <ion-icon name="arrow-dropright" (click)="increment()"></ion-icon>
+        </ion-col>
+        <ion-col> </ion-col>
+      </ion-row>
+      <hr />
+      <ion-row>
+        <ion-col> </ion-col>
+        <ion-col> </ion-col>
+        <ion-col
+          >Add Cylinder <ion-icon name="add-circle" item-right></ion-icon
+        ></ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="h-card">
+      <ion-row>
+        <ion-col>
+          <!-- 1 Items | N1,550 -->
+        </ion-col>
+        <ion-col>
+          <div style="float: right" (click)="cart()">
+            View cart >
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-toolbar>
+</ion-footer>

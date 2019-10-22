@@ -1,0 +1,51 @@
+<ion-content>
+  <div class="first centre">
+    <img class="centre" src="assets/imgs/logo.svg" />
+  </div>
+  <div class="auth">
+    <ion-row>
+      <ion-col>
+        <b class="login">Log In</b>
+      </ion-col>
+      <ion-col (click)="signup()">
+        <b class="signup">Sign Up</b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="second">
+    <ion-list class="login-pad">
+      <ion-label stacked>Email</ion-label>
+      <ion-row>
+        <ion-col size="1">
+          <img class="img-pad" src="assets/imgs/mail.svg" />
+        </ion-col>
+        <ion-col>
+          <div class="b-line">
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-label stacked>Password</ion-label>
+      <ion-row>
+        <ion-col size="1">
+          <img class="img-pad" src="assets/imgs/lock.svg" />
+        </ion-col>
+        <ion-col>
+          <div class="b-line">
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <br />
+      <br />
+      <br />
+      <div class="f-pass">Forgot your password?</div>
+      <br />
+
+      <div class="button1" (click)="login()">
+        Login
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

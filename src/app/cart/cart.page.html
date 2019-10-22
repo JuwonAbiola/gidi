@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <br />
+  <div class="card-m">
+    <ion-row>
+      <ion-col>
+        <b class="card-p">
+          Vendor Info
+        </b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div style="color: #298DCC;margin:12px;margin-bottom:0;">
+    {{ order.vendor }}
+  </div>
+  <br />
+  <br />
+  <div class="card-v">
+    <ion-row>
+      <ion-col col-3>
+        <b style="color: #fff">
+          1X
+        </b>
+      </ion-col>
+      <ion-col>
+        <b style="color: #fff"> {{ order.currentNumber }}kg </b>
+      </ion-col>
+      <ion-col col-3>
+        <!-- <b class="card-h"> N{{ dfee.amount }} </b> -->
+        <b class="card-h"> N50 </b>
+      </ion-col>
+    </ion-row>
+    <div style="border: 0.5px solid #F3F3F3;margin: 9px 10px; "></div>
+  </div>
+  <br />
+  <br />
+  <div class="card-v">
+    <ion-row>
+      <ion-col col-3>
+        <b style="color: #fff">
+          Service fee
+        </b>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col col-3>
+        <b style="color: #fff"> N{{ dfee.service_fee }} </b>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+        <b style="color: #fff">
+          Transport fee
+        </b>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col col-3>
+        <b style="color: #fff"> N{{ dfee.transport_fee }} </b>
+      </ion-col>
+    </ion-row>
+    <div style="border: 0.5px solid #F3F3F3;margin: 9px 10px; "></div>
+    <ion-row>
+      <ion-col col-3>
+        <b style="color: #fff">
+          Total
+        </b>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col col-3>
+        <b class="card-h"> N{{ dfee.total }} </b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <br />
+  <br />
+
+  <div class="card-v">
+    <ion-row>
+      <ion-col col>
+        <b style="color: #fff">
+          Delivery address
+        </b>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="0">
+        <b style="text-align: center;font-size:20%">∙</b>
+      </ion-col>
+      <ion-col>
+        <b style="color: #fff">
+          {{ order.location }}
+        </b>
+      </ion-col>
+    </ion-row>
+    <div style="border: 0.5px solid #F3F3F3;margin: 9px 10px; "></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="button1" (click)="checkout()">
+    Checkout >
+  </div>
+</ion-content>
